@@ -71,7 +71,7 @@ On Contrast for defer the scripts will be executed only when all the document ha
 Important Note:
 * Async does not maintain order so if the scripts have transitive dependency it may break.
 * Defer mainting the order of execution of scripts.
-![Async_Defer](https://raw.githubusercontent.com/Asad-360/namaste-react/master/01_Inception/Async_Defer.PNG)
+![Async_Defer](https://raw.githubusercontent.com/Asad-360/namaste-react/master/01_Inception/Code/Async_Defer.PNG)
 
 **`Q. What is difference between react.development.js and react.production.js files via CDN?`** <br />
 Both are react files and obtained from CDN however react.production.js is more optimized and production ready. It is minified and compressed also.
