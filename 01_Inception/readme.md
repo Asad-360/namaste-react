@@ -1,4 +1,6 @@
 # 01. Inception Assignment
+🚀 > Ideas are like dreams; they begin as a whisper and can end up changing the world. ❤️‍🔥
+
 **`Q1. What is Emmet?`** <br />
 Emmet is a plugin for many popular text editors like VSCODE Which increase the development time. Its syntax is inspired by the css selectors. It can make development very fast.
 
