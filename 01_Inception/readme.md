@@ -29,7 +29,7 @@ Hosting Content on Multiple Servers: Some websites may host content on multiple 
 
 In summary, CDNs are widely used because they provide a cost-effective, reliable, and scalable solution for delivering web content quickly and securely to users worldwide. While alternative methods exist, CDNs are often the preferred choice for optimizing web performance and user experience.
 
-**`Q: Why is React known as React?`**
+**`Q: Why is React known as React?`** <br />
 
 React, the JavaScript library for building user interfaces, is called "React" because it follows the concept of "reactive" or "declarative" programming. The name reflects its core philosophy of allowing developers to create UIs that react to changes in data and environment.
 
@@ -47,7 +47,7 @@ In summary, the React name reflects the basic principles of declarative, reactiv
 
 corsorigin is specified in script tag when you are requesting script from another domain.
 
-**`Q: What is cross origin in script tag?`**
+**`Q: What is cross origin in script tag?`** <br />
 The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
 
 Web pages often make requests to load resources on other servers. Here is where CORS comes in.
@@ -60,13 +60,16 @@ CORS stands for Cross-Origin Resource Sharing, and is a mechanism that allows re
 
 Tip: The opposite of cross-origin requests is same-origin requests. This means that a web page can only interact with other documents that are also on the same server. This policy enforces that documents that interact with each other must have the same origin (domain).
 
-**`Q. Difference between React and ReactDOM?`**
+**`Q. Difference between React and ReactDOM?`** <br />
 React and ReactDOM both are libraries, The React contains the core part i-e the main business logic related to components etc while the ReactDOM contains the business logic / algos specifically related to the DOM part.
 
-**`Q. Difference between Async / Defer?`**
+**`Q. Difference between Async / Defer?`** <br />
 The main difference when the scrits will be executed. So in async the both the dom processing / downloading is hapenening at parallel However if at some place in html page let say in middle of body tag before ending there is some script so the async will stop proessing the DOM/Html furhter and start downloading the scripts and once that are downloaded then only the remaining processing will be completed.
 On Contrast for defer the scripts will be executed only when all the document has been processed.
 Important Note:
 * Async does not maintain order so if the scripts have transitive dependency it may break.
 * Defer mainting the order of execution of scripts.
 ![Async_Defer](https://raw.githubusercontent.com/Asad-360/namaste-react/master/01_Inception/Async_Defer.PNG)
+
+**`Q. What is difference between react.development.js and react.production.js files via CDN?`** <br />
+Both are react files and obtained from CDN however react.production.js is more optimized and production ready. It is minified and compressed also.
