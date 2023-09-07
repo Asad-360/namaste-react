@@ -1,5 +1,5 @@
 # 01 Inception Assignment
-*Q1. What is Emmet? * <br />
+**`Q1. What is Emmet?`** <br />
 Emmet is a plugin for many popular text editors like VSCODE Which increase the development time. Its syntax is inspired by the css selectors. It can make development very fast.
 
 *Q2. What is CDN and why should we use it? * <br />
