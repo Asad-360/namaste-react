@@ -29,20 +29,6 @@ Hosting Content on Multiple Servers: Some websites may host content on multiple 
 
 In summary, CDNs are widely used because they provide a cost-effective, reliable, and scalable solution for delivering web content quickly and securely to users worldwide. While alternative methods exist, CDNs are often the preferred choice for optimizing web performance and user experience.
 
-React, the JavaScript library for building user interfaces, is called "React" because it follows the concept of "reactive" or "declarative" programming. The name reflects its core philosophy of allowing developers to create UIs that react to changes in data and environment.
-
-Here's some more context:
-
-* Declarative programming: React encourages developers to define desired UI state and layout, then take care to update the actual UI to match that state This is in contrast to imperative programming, where developers explicitly specify how to make changes to the UI internally in response to various events or data changes
-
-Answer: React makes it easy to create user interfaces that automatically update in response to changes in the underlying data or environment. When data changes, React simply "reacts" by properly updating those parts of the UI that need to change, without developers having to handle these updates manually
-
-* Component-based: Promotes the decomposition of React UIs into smaller reusable components. These objects are the building blocks of a React application and can be thought of as individual units that "react" to changes in their input data.
-
-* Virtual DOM: React uses a virtual representation of the DOM (Document Object Model) to optimize the update process. It calculates the most efficient way to update the real DOM by comparing the virtual DOM to the current state of the DOM.
-
-In summary, the React name reflects the basic principles of declarative, reactive, and component-based programming, all of which contribute to the efficiency of building user interfaces for web and mobile applications
-
 **`Q: Why is React known as React?`**
 
 React, the JavaScript library for building user interfaces, is called "React" because it follows the concept of "reactive" or "declarative" programming. The name reflects its core philosophy of allowing developers to create UIs that react to changes in data and environment.
@@ -60,6 +46,7 @@ Virtual DOM: React uses a virtual representation of the DOM (Document Object Mod
 In summary, the React name reflects the basic principles of declarative, reactive, and component-based programming, all of which contribute to the efficiency of building user interfaces for web and mobile applications
 
 corsorigin is specified in script tag when you are requesting script from another domain.
+
 **`Q: What is cross origin in script tag?`**
 The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
 
