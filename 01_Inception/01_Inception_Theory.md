@@ -5,6 +5,7 @@
 Emmet is a plugin for many popular text editors like VSCODE Which increase the development time. Its syntax is inspired by the css selectors. It can make development very fast.
 
 **`Q2. What is CDN and why should we use it?`** <br />
+![CDN](https://www.researchgate.net/profile/Zhen-Chen-26/publication/269337938/figure/fig1/AS:614164070412310@1523439533520/The-mechanism-of-CDN.png)
 CDN stands for Content Delivery Network, and it is a network of servers distributed across various locations around the world. The primary purpose of a CDN is to deliver web content, such as images, videos, stylesheets, JavaScript files, and other assets, to users in a faster and more efficient manner. CDNs are commonly used to enhance the performance, security, and reliability of websites and web applications. Here's why CDNs are used and why they are often the preferred choice:
 
 Faster Content Delivery: CDNs reduce the physical distance between the user's device and the web server that hosts the content. When a user requests a webpage or a resource, the CDN serves it from the nearest edge server, which reduces latency and load times. This results in a faster and smoother user experience.
