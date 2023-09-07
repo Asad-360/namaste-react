@@ -69,4 +69,4 @@ On Contrast for defer the scripts will be executed only when all the document ha
 Important Note:
 * Async does not maintain order so if the scripts have transitive dependency it may break.
 * Defer mainting the order of execution of scripts.
-![Async_Defer](https://github.com//Asad-360/blob/namaste-react/Async_Defer.PNG?raw=true)
+![Async_Defer](https://raw.githubusercontent.com/Asad-360/namaste-react/master/01_Inception/Async_Defer.PNG)
