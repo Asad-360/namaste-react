@@ -59,3 +59,14 @@ CORS is used to manage cross-origin requests.
 CORS stands for Cross-Origin Resource Sharing, and is a mechanism that allows resources on a web page to be requested from another domain outside their own domain. It defines a way of how a browser and server can interact to determine whether it is safe to allow the cross-origin request. CORS allows servers to specify who can access the assets on the server, among many other things.
 
 Tip: The opposite of cross-origin requests is same-origin requests. This means that a web page can only interact with other documents that are also on the same server. This policy enforces that documents that interact with each other must have the same origin (domain).
+
+**`Q. Difference between React and ReactDOM?`**
+React and ReactDOM both are libraries, The React contains the core part i-e the main business logic related to components etc while the ReactDOM contains the business logic / algos specifically related to the DOM part.
+
+**`Q. Difference between Async / Defer?`**
+The main difference when the scrits will be executed. So in async the both the dom processing / downloading is hapenening at parallel However if at some place in html page let say in middle of body tag before ending there is some script so the async will stop proessing the DOM/Html furhter and start downloading the scripts and once that are downloaded then only the remaining processing will be completed.
+On Contrast for defer the scripts will be executed only when all the document has been processed.
+Important Note:
+* Async does not maintain order so if the scripts have transitive dependency it may break.
+* Defer mainting the order of execution of scripts.
+![Async_Defer](https://github.com//Asad-360/blob/namaste-react/Async_Defer.PNG?raw=true)
