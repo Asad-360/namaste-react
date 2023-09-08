@@ -1,0 +1,4 @@
+# 02_ igniting app modules
+node_modules/
+dist/
+.parcel-cache/
