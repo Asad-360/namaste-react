@@ -1,5 +1,5 @@
 # 03. Lying The Foundations
-> 🚀 Ideas are like dreams; they begin as a whisper and can end up changing the world. ❤️‍🔥
+> Laying the foundations is where dreams take root, and the future begins to rise. 🌱💫
 
 **`Q1. What is JSX?`** <br />
 JSX stands for Javascript XML. It is the extension for React library to writecode in html like format which is easy for understanding and then it is converted to React Element using BABEL.
@@ -15,5 +15,5 @@ The type attribute indicates which type of script it is like Module or Import Ma
 
 
 **`Q: {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent><TitleComponent/>} ?`** <br />
-* {TitleComponent} => This refers to React Element
+* `{TitleComponent}` => This refers to React Element
 * `{<TitleComponent/>}/{<TitleComponent><TitleComponent/>}` => This referes to React Component
