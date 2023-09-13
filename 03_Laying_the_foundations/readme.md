@@ -16,4 +16,4 @@ The type attribute indicates which type of script it is like Module or Import Ma
 
 **`Q: {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent><TitleComponent/>} ?`** <br />
 * {TitleComponent} => This refers to React Element
-* {<TitleComponent/>}/{<TitleComponent><TitleComponent/>} => This referes to React Component
+* `{<TitleComponent/>}/{<TitleComponent><TitleComponent/>}` => This referes to React Component
