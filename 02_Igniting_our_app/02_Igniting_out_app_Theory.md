@@ -1,5 +1,5 @@
-# 03. Lying The Foundations
-> Laying the foundations is where dreams take root, and the future begins to rise. 🌱💫
+# 03. Igniting our app
+> 🔥 "It only takes a spark to ignite a brilliant idea." 🔥
 
 **`Q1. What is NPM?`** <br />
 NPM is package manager that manage the npm database. Packages can be installed using npm.
