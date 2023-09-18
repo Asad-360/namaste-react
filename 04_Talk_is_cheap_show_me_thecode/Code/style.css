@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(238, 238, 232);
+  background-color: rgba(255, 255, 255, 0.513);
 }
 .header {
   display: flex;
@@ -27,26 +27,38 @@ body {
 }
 
 /*Body*/
+
 .resturants{
-    padding: 10px;
-    border: solid 3px black;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
 .res-card{
     width: 320px;
-    padding: 10px 20px;
+    padding: 20px 40px;
     transition: all ease-in-out 0.3s 0.2s;
 }
 .res-card:hover{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- 
-    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 }
 .res-img{
     width: inherit;
-    height: 210px;
+    height: 240px;
     border-radius: 40px;
+}
+
+.card-name{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-font-family{
+    font-family: "Roboto", sans-serif;
+}
+
+.card-cuisines{
+    font-weight: 300;
 }
