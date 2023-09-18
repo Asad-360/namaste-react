@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(238, 238, 232);
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+}
+.logo {
+  width: 150px;
+}
+
+.nav-items > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-items > ul > li {
+  display: inline;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Body*/
+.resturants{
+    padding: 10px;
+    border: solid 3px black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.res-card{
+    width: 320px;
+    padding: 10px 20px;
+    transition: all ease-in-out 0.3s 0.2s;
+}
+.res-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ 
+    width: 300px;
+}
+.res-img{
+    width: inherit;
+    height: 210px;
+    border-radius: 40px;
+}
