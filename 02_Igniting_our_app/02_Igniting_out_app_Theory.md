@@ -17,3 +17,9 @@ Npx is the package runner it is used to run the npm pacakges.
 
 **`Q: What is the differences between dependencies and dev-dependencies?`** <br />
 Dev-Dependencies is the dependences that we use for development purpose / testing purpose only. If you do not want to install devdependencies you can simply use `npm install --production`
+
+**`Q: What is tree shaking?`** <br />
+Tree shaking is the algorithm that is used to remove dead code in bundler like parcel.
+
+**`Q: What is Hot Module Replacement?`** <br />
+Hot Module Replacement is a technique in which any module that is changed is reloaded (only that part not whole app). This creates better and fast application loading with refreshing the whole page. 
