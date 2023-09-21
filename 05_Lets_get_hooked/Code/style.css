@@ -70,3 +70,152 @@ body {
   border: none;
   padding: 10px;
 }
+
+/*Shimmer ui*/
+
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.shimmer-cards {
+  width: 330px; /* Set your desired card width */
+  height: 300px; /* Set your desired card height */
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px; /* Add border-radius to make corners round */
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+
+
+/*filter butotn*/
+/* styles.css */
+
+/* Base button styles */
+.food-filter-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FF5733; /* A warm, food-related color */
+  color: #FFF; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect */
+.food-filter-button:hover {
+  background-color: #E34928; /* Darker shade of the background color on hover */
+}
+
+/* Active state - when clicked */
+.food-filter-button:active {
+  background-color: #FF3E1F; /* Slightly darker on active state */
+}
+
+/* Optional: Add some drop shadow to create a button effect */
+.food-filter-button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.filter{
+  width: 60vw;
+  display: flex;
+}
+
+/* Logout button styles */
+.logout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FF5733; /* A different color for the logout button */
+  color: #FFF; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  margin-left: 10px; /* Add some spacing between the buttons */
+}
+
+/* Hover effect */
+.logout-button:hover {
+  background-color: #E34928; /* Darker shade of the background color on hover */
+}
+
+/* Active state - when clicked */
+.logout-button:active {
+  background-color: #FF3E1F; /* Slightly darker on active state */
+}
+
+/* Optional: Add some drop shadow to create a button effect */
+.logout-button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* styles.css */
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Add some spacing from the buttons */
+}
+
+/* Search input styles */
+.food-search {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FF5733; /* Border color */
+  border-radius: 5px;
+}
+
+/* Search button styles */
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #FF5733; /* A food-related color */
+  color: #FFF; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  margin-left: 10px; /* Add some spacing between the input and button */
+}
+
+/* Hover effect */
+.search-button:hover {
+  background-color: #E34928; /* Darker shade of the background color on hover */
+}
+
+/* Active state - when clicked */
+.search-button:active {
+  background-color: #FF3E1F; /* Slightly darker on active state */
+}
+
+/* Optional: Add some drop shadow to create a button effect */
+.search-button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-parent{
+  display: flex;
+  justify-content: center;
+}
+.search-container{
+  width: 400px;
+}
