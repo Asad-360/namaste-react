@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
+import About from "./About";
+import { Link } from "react-router-dom";
 const Header = () => {    
     const [toggleLogout , setToggleLogout] = useState('Logout');
     return (
@@ -12,9 +14,9 @@ const Header = () => {
         </div>
         <div className="nav-items">
           <ul>
-            <li className="item">Home</li>
-            <li className="item">About Us</li>
-            <li className="item">Contact Us</li>
+            <li className="item"><Link to="/">Home</Link></li>
+            <li className="item"><Link to="/about">About us</Link></li>
+            <li className="item"><Link to="/contactus">Contact us</Link></li>
             <li className="item">Cart</li>
             <li className="item">
               <button onClick={()=>{
