@@ -178,7 +178,7 @@ body {
 /* Search input styles */
 .food-search {
   flex: 1;
-  padding: 10px;
+  padding: 20px;
   font-size: 16px;
   border: 2px solid #FF5733; /* Border color */
   border-radius: 5px;
@@ -186,7 +186,7 @@ body {
 
 /* Search button styles */
 .search-button {
-  padding: 10px 20px;
+  padding: 20px 20px;
   font-size: 16px;
   background-color: #FF5733; /* A food-related color */
   color: #FFF; /* Text color */
@@ -217,5 +217,5 @@ body {
   justify-content: center;
 }
 .search-container{
-  width: 400px;
+  width: 500px;
 }
