@@ -1,7 +1,9 @@
 import RestaurantCard from "./RestaurantCard.js";
-import swiggyData from "../utils/mockdata.js";
+import RestaurantMenu from "./RestaurantMenu.js";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer.js";
+import { API_GET_RESTURANTS_LIST } from "../utils/constants.js";
 
 const Body = () => {
   const swiggyObj = [];
@@ -23,21 +25,19 @@ const Body = () => {
   // ! This console.log will be called before the useEffect hook
   // we now have to fetch the data.
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(API_GET_RESTURANTS_LIST);
     const json = await data.json();
-    const resturantData= json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    setResData(  resturantData  );
-    setFilteredResData( resturantData );
+    const resturantData =
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    setResData(resturantData);
+    setFilteredResData(resturantData);
   };
-  console.log("body rendered is called!");
   if (resData.length === 0) {
     return <Shimmer />;
   }
   return (
     <div className="body">
-      {/* <div className="search-bar"></div> */}
+      {/* <div className="search-bar"></div> */}  
       <div className="search-parent">
         <div className="search-container">
           <input
@@ -52,13 +52,11 @@ const Body = () => {
           />
           <button
             onClick={() => {
-              console.log("search value is", searchValue);
               const valueFromSearchBox = searchValue.toLowerCase().trim();
               const clone = resData;
               const filteredData = clone.filter((x) => {
                 return x.info.name.toLowerCase().includes(valueFromSearchBox);
               });
-              console.log("filtered data is", filteredData);
               setFilteredResData(filteredData);
             }}
             class="search-button"
@@ -69,7 +67,12 @@ const Body = () => {
       </div>
       <div className="resturants">
         {resFilteredData.map((swig, index) => (
-          <RestaurantCard key={index} swiggyData={swig} />
+          <Link
+            to={"/restaurant/" + swig?.info?.id}
+            key={swig?.info?.id}
+          >
+            <RestaurantCard key={index} swiggyData={swig} />
+          </Link>
         ))}
       </div>
     </div>
