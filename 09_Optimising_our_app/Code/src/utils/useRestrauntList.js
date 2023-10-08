@@ -10,9 +10,11 @@ const useRestrauntList = (getRestaurantListUrl) => {
   const fetchData = async () => {
     const data = await fetch(getRestaurantListUrl);
     const json = await data.json();
-    debugger
+    const indexToAccess = json.data.cards.findIndex(meetsCriteria);
     const resturantData =
-      json.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants; // check for 2
+      json.data.cards[indexToAccess]?.card?.card?.gridElements?.infoWithStyle?.restaurants; 
+    // The below was previous with hardcoded 1
+    //  json.data.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants; // check for 2
     setResData(resturantData);
     setFilteredResData(resturantData);
   };
@@ -23,6 +25,11 @@ const useRestrauntList = (getRestaurantListUrl) => {
     });
     setFilteredResData(filteredData);
   };
+  function meetsCriteria(card) {
+    return (
+      card?.card?.card?.gridElements?.infoWithStyle?.restaurants != null
+    );
+  }
   return [resFilteredData, setFilteredRestruants];
 };
 export default useRestrauntList;
