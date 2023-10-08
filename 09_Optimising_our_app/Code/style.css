@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.513);
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+}
+.logo {
+  width: 150px;
+}
+
+.nav-items > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-items > ul > li {
+  display: inline;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Body*/
+
+.resturants {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.res-card {
+  width: 320px;
+  padding: 20px 40px;
+  transition: all ease-in-out 0.1s 0.1s;
+  margin: 2px;
+}
+.res-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.res-img {
+  width: inherit;
+  height: 240px;
+  border-radius: 40px;
+}
+
+.card-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.custom-font-family {
+  font-family: "Roboto", sans-serif;
+}
+
+.card-cuisines {
+  font-weight: 300;
+}
+
+/**/
+filterbutton #filterBtn {
+  background-color: aqua;
+  border: none;
+  padding: 10px;
+}
+
+/*Shimmer ui*/
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.shimmer-cards {
+  width: 330px; /* Set your desired card width */
+  height: 300px; /* Set your desired card height */
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px; /* Add border-radius to make corners round */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/*filter butotn*/
+/* styles.css */
+
+/* Base button styles */
+.food-filter-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5733; /* A warm, food-related color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect */
+.food-filter-button:hover {
+  background-color: #e34928; /* Darker shade of the background color on hover */
+}
+
+/* Active state - when clicked */
+.food-filter-button:active {
+  background-color: #ff3e1f; /* Slightly darker on active state */
+}
+
+/* Optional: Add some drop shadow to create a button effect */
+.food-filter-button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.filter {
+  width: 60vw;
+  display: flex;
+}
+
+/* Logout button styles */
+.logout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5733; /* A different color for the logout button */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  margin-left: 10px; /* Add some spacing between the buttons */
+}
+
+/* Hover effect */
+.logout-button:hover {
+  background-color: #e34928; /* Darker shade of the background color on hover */
+}
+
+/* Active state - when clicked */
+.logout-button:active {
+  background-color: #ff3e1f; /* Slightly darker on active state */
+}
+
+/* Optional: Add some drop shadow to create a button effect */
+.logout-button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* styles.css */
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Add some spacing from the buttons */
+}
+
+/* Search input styles */
+.food-search {
+  flex: 1;
+  padding: 20px;
+  font-size: 16px;
+  border: 2px solid #ff5733; /* Border color */
+  border-radius: 5px;
+}
+
+/* Search button styles */
+.search-button {
+  padding: 20px 20px;
+  font-size: 16px;
+  background-color: #ff5733; /* A food-related color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  margin-left: 10px; /* Add some spacing between the input and button */
+}
+
+/* Hover effect */
+.search-button:hover {
+  background-color: #e34928; /* Darker shade of the background color on hover */
+}
+
+/* Active state - when clicked */
+.search-button:active {
+  background-color: #ff3e1f; /* Slightly darker on active state */
+}
+
+/* Optional: Add some drop shadow to create a button effect */
+.search-button {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-parent {
+  display: flex;
+  justify-content: center;
+}
+.search-container {
+  width: 500px;
+}
+
+/*Resuturant Menu*/
+.resturantMenuContainer {
+  display: flex;
+  justify-content: center;
+}
+.resturantMenu {
+  width: 700px;
+}
+
+/* Define a food-themed color palette */
+:root {
+  --primary-color: #ff5733; /* Primary color for the theme */
+  --secondary-color: #f2b705; /* Secondary color for the theme */
+  --text-color: #333; /* Text color */
+  --font-family: Arial, sans-serif; /* Font family */
+}
+
+/* Style the outer container */
+.resturantMenuContainer {
+  background-color: var(--primary-color);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the menu container */
+.resturantMenu {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the list */
+.resturantMenu ul {
+  list-style: none;
+  padding: 0;
+}
+.resturantMenuItem{
+  padding: 20;
+}
+
+/* Style the list items */
+.resturantMenuItem {
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: var(--text-color);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--secondary-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for list items */
+/* .resturantMenuItem:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+} */
+
+.restaurant-tags {
+  color: #333;
+}
+
+.resImg {
+  width: 205px;
+  height: 150px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+}
+/*End of resturant menu*/
+
+.resturantMenuItem{
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuitemMeta{
+  text-align: left;
+}
+
+.resMenuDesc{
+  font-size: 13px;
+  font-weight: 300;
+  color: rgb(176, 173, 173);
+}
+.resMenuPrice{
+  font-style: italic;
+}
+
+.vegLabel{
+padding:2px 8px;
+  color: transparent;
+}
+
+.veg{
+background-color: green;
+}
+
+.nonVeg{
+  background-color: red;
+}
