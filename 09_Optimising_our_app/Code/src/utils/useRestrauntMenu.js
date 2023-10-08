@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
-const useRestrauntMenu = (resId,API_GET_RESTURANT_MENU,MENU_ITEM_TYPE_KEY ) => {
-
-
+const useRestrauntMenu = (
+  resId,
+  getRestaurantMenuUrl,
+  menuItemMenuItemKeyType
+) => {
   const [resInfo, setResInfo] = useState([]);
   const [resMenuItemFiltered, setResMenuItemFiltered] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const response = await fetch( API_GET_RESTURANT_MENU+resId);
+    const response = await fetch(getRestaurantMenuUrl + resId);
     const json = await response.json();
     const menuItemsData =
       json?.data?.cards
         .find((x) => x.groupedCard)
         ?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((x) => x.card?.card)
-        ?.filter((x) => x["@type"] == MENU_ITEM_TYPE_KEY)
+        ?.filter((x) => x["@type"] == menuItemMenuItemKeyType)
         ?.map((x) => x.itemCards)
         .flat()
         .map((x) => x.card?.info) || [];
