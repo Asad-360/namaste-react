@@ -5,9 +5,7 @@ import Shimmer from "./Shimmer.js";
 import useRestrauntList from "../utils/useRestrauntList";
 import { API_GET_RESTURANTS_LIST } from "../utils/constants.js";
 const Body = () => {
-  const [resFilteredData, setFilteredResData] = useRestrauntList(
-    API_GET_RESTURANTS_LIST
-  );
+  const [resFilteredData, setFilteredResData] = useRestrauntList( API_GET_RESTURANTS_LIST);
   const [searchValue, setSearchValue] = useState("");
 
   if (resFilteredData && resFilteredData.length === 0) {
