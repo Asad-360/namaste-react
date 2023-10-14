@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {    
     const [toggleLogout , setToggleLogout] = useState('Logout');
     return (
-      <div className="flex justify-between shadow-sm items-center">
+      <div className="flex justify-between items-center mx-40">
         <div className="logo-container">
           <img
             className="w-28"
@@ -12,13 +12,13 @@ const Header = () => {
           ></img>
         </div>
         <div className="nav-items">
-          <ul className="flex m-4 p-4">
-            <li className="item px-4"><Link to="/">Home</Link></li>
-            <li className="item px-4"><Link to="/about">About us</Link></li>
-            <li className="item px-4"><Link to="/contactus">Contact us</Link></li>
-            <li className="item px-4">Cart</li>
-            <li className="item px-4"><Link to="/profile">Profile</Link></li>
-            <li className="item px-4">
+          <ul className="flex px-2">
+            <li className="item px-5"><Link to="/">Home</Link></li>
+            <li className="item px-5"><Link to="/about">About us</Link></li>
+            <li className="item px-5"><Link to="/contactus">Contact us</Link></li>
+            <li className="item px-5">Cart</li>
+            <li className="item px-5"><Link to="/profile">Profile</Link></li>
+            <li className="item px-5">
               <button onClick={()=>{
                 //toggleLogout = 'Login';
                 toggleLogout === 'Logout' ? setToggleLogout('Login') : setToggleLogout('Logout');

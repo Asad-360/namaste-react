@@ -18,7 +18,7 @@ const RestaurantMenu = () => {
     MENU_ITEM_TYPE_KEY
   );
   if (resMenuItem.length === 0) {
-    return <Shimmer />;
+    return <Shimmer shimType={"list"} />;
   }
   function handleChange(e) {
     setChecked(e.target.checked);

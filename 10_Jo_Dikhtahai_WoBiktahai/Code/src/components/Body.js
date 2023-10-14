@@ -9,12 +9,12 @@ const Body = () => {
   const [searchValue, setSearchValue] = useState("");
 
   if (resFilteredData && resFilteredData.length === 0) {
-    return <Shimmer />;
+    return <Shimmer shimType={"card"} />;
   }
   return (
     <div className={COLOR_PRIMARY_BG}>
       <div className="flex justify-center">
-        <div className="search p-1 rounded-md">
+        <div className="search p-1 my-4 rounded-md">
           <input
             type="text"
             className="focus:ring-2 focus:ring-blue-500 focus:outline-none p-2 ring-1 ring-slate-200 shadow-sm w-96"
@@ -25,7 +25,7 @@ const Body = () => {
             }}
             value={searchValue}
           />
-          <button className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-lg"
+          <button className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-sm"
             onClick={() => {
               const valueFromSearchBox = searchValue.toLowerCase().trim();
               setFilteredResData(valueFromSearchBox);
