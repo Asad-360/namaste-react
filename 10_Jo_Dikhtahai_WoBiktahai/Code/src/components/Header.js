@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {    
     const [toggleLogout , setToggleLogout] = useState('Logout');
     return (
-      <div className="header">
+      <div className="flex">
         <div className="logo-container">
           <img
             className="logo"
