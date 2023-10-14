@@ -13,11 +13,11 @@ const Body = () => {
   }
   return (
     <div className="body">
-      <div className="search-parent">
-        <div className="search-container">
+      <div className="flex justify-center">
+        <div className="search p-1 rounded-md">
           <input
             type="text"
-            className="food-search"
+            className="focus:ring-2 focus:ring-blue-500 focus:outline-none p-2 ring-1 ring-slate-200 shadow-sm w-96"
             placeholder="Search for food..."
             onChange={(e) => {
               const serValue = e.target.value;
@@ -25,18 +25,17 @@ const Body = () => {
             }}
             value={searchValue}
           />
-          <button
+          <button className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-lg"
             onClick={() => {
               const valueFromSearchBox = searchValue.toLowerCase().trim();
               setFilteredResData(valueFromSearchBox);
             }}
-            class="search-button"
           >
             Search
           </button>
         </div>
       </div>
-      <div className="resturants">
+      <div className="flex flex-wrap justify-center">
         {resFilteredData.map((swig, index) => (
           <Link to={"/restaurant/" + swig?.info?.id} key={swig?.info?.id}>
             <RestaurantCard key={index} swiggyData={swig} />
