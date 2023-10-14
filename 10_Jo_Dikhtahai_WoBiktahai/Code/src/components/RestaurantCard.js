@@ -6,9 +6,9 @@ const RestaurantCard = (swiggyData) => {
 
   return (
     <div
-      className="m-4 p-4 w-[300px] bg-white hover:border"
+      className="m-4 p-4 w-[250px] bg-white hover:border"
     >
-      <div className="h-[200px]">
+      <div className="h-[180px]">
         <img
           className="w-full h-full rounded-lg object-cover shadow-lg"
           src={cardImageUrl}

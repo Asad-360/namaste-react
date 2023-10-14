@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer.js";
 import useRestrauntList from "../utils/useRestrauntList";
-import { API_GET_RESTURANTS_LIST } from "../utils/constants.js";
+import { API_GET_RESTURANTS_LIST , COLOR_PRIMARY_BG } from "../utils/constants.js";
 const Body = () => {
   const [resFilteredData, setFilteredResData] = useRestrauntList( API_GET_RESTURANTS_LIST);
   const [searchValue, setSearchValue] = useState("");
@@ -12,7 +12,7 @@ const Body = () => {
     return <Shimmer />;
   }
   return (
-    <div className="body">
+    <div className={COLOR_PRIMARY_BG}>
       <div className="flex justify-center">
         <div className="search p-1 rounded-md">
           <input

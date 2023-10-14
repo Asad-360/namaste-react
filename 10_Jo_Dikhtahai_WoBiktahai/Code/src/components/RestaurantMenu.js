@@ -7,6 +7,7 @@ import {
   RESTRAUNT_MENU_ITEM_IMG,
   API_GET_RESTURANT_MENU,
   MENU_ITEM_TYPE_KEY,
+  COLOR_PRIMARY_BG
 } from "../utils/constants";
 const RestaurantMenu = () => {
   const [isChecked, setChecked] = useState(false);
@@ -24,38 +25,40 @@ const RestaurantMenu = () => {
     filterVegNonVegResMenuItem(e.target.checked);
   }
   return (
-    <div className="resturantMenuContainer">
-      <div className="resturantMenu">
-        <div>
-          <span>
+    <div className={COLOR_PRIMARY_BG}>
+      <div >
+        <div className="flex justify-center">
+          <span className="w-[60vw] p-4">
             <input value="Veg" type="checkbox" onChange={handleChange} />{" "}
             {isChecked ? <span>Veg Only</span> : <span>All</span>}
           </span>
         </div>
         <ul>
           {resMenuItem.map((restaurant) => (
-            <li>
-              <div className="resturantMenuItem">
-                <div className="menuitemMeta">
+            <li className="flex items-center justify-center ">
+              <div className="grid grid-cols-3 gap-2 m-4 w-[60vw] p-4 bg-white shadow-sm">
+                <div className="col-span-2">
                   <span
                     className={
-                      restaurant.isVeg ? "vegLabel veg" : "vegLabel nonVeg"
+                      restaurant.isVeg
+                        ? "bg-green-500 px-4 py-0.5 rounded-sm font-bold text-white"
+                        : "bg-red-400 px-4 py-0.5 rounded-sm font-bold text-white"
                     }
-                  >
-                    x
-                  </span>
-                  <h3>{restaurant.name}</h3>
+                  ></span>
+                  <h3 className="font-bold text-lg">{restaurant.name}</h3>
                   <p className="restaurant-tags">
                     {restaurant?.cuisines?.join(", ")}
                   </p>
-                  <h6 className="resMenuPrice">
+                  <h6 className="text-xs py-2">
                     Rs {restaurant.price ? restaurant.price : 0 / 100}
                   </h6>
-                  <h5 className="resMenuDesc">{restaurant.description}</h5>
+                  <h5 className="font-extralight text-xs text-gray-500">
+                    {restaurant.description}
+                  </h5>
                 </div>
-                <div className="menuitemImage">
+                <div className="flex justify-end">
                   <img
-                    className="resImg"
+                    className="w-[150px] object-cover rounded-sm shadow-md"
                     src={RESTRAUNT_MENU_ITEM_IMG + restaurant.imageId}
                   ></img>
                 </div>
