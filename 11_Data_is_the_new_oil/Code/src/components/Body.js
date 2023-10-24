@@ -1,12 +1,19 @@
-import RestaurantCard from "./RestaurantCard.js";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer.js";
 import useRestrauntList from "../utils/useRestrauntList";
-import { API_GET_RESTURANTS_LIST , COLOR_PRIMARY_BG } from "../utils/constants.js";
+import {
+  API_GET_RESTURANTS_LIST,
+  COLOR_PRIMARY_BG,
+} from "../utils/constants.js";
 const Body = () => {
-  const [resFilteredData, setFilteredResData] = useRestrauntList( API_GET_RESTURANTS_LIST);
+  const [resFilteredData, setFilteredResData] = useRestrauntList(
+    API_GET_RESTURANTS_LIST
+  );
   const [searchValue, setSearchValue] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   if (resFilteredData && resFilteredData.length === 0) {
     return <Shimmer shimType={"card"} />;
@@ -25,7 +32,8 @@ const Body = () => {
             }}
             value={searchValue}
           />
-          <button className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-sm"
+          <button
+            className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-sm"
             onClick={() => {
               const valueFromSearchBox = searchValue.toLowerCase().trim();
               setFilteredResData(valueFromSearchBox);
@@ -38,7 +46,11 @@ const Body = () => {
       <div className="flex flex-wrap justify-center">
         {resFilteredData.map((swig, index) => (
           <Link to={"/restaurant/" + swig?.info?.id} key={swig?.info?.id}>
-            <RestaurantCard key={index} swiggyData={swig} />
+            {index % 2 == 0 ? (
+              <RestaurantCardPromoted swiggyData={swig} />
+            ) : (
+              <RestaurantCard key={index} swiggyData={swig} />
+            )}
           </Link>
         ))}
       </div>

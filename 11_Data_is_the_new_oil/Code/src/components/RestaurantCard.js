@@ -5,9 +5,7 @@ const RestaurantCard = (swiggyData) => {
   const cardImageUrl = CDN_URL + cloudinaryImageId;
 
   return (
-    <div
-      className="m-4 p-4 w-[250px] bg-white hover:border"
-    >
+    <div className="m-4 p-4 w-[250px] bg-white hover:border">
       <div className="h-[180px]">
         <img
           className="w-full h-full rounded-lg object-cover shadow-lg"
@@ -17,9 +15,7 @@ const RestaurantCard = (swiggyData) => {
       </div>
 
       <h3 className="font-bold text-lg py-2">{name}</h3>
-      <h4 className="font-light text-sm bg-gray-50">
-        {cuisines.join("  ")}
-      </h4>
+      <h4 className="font-light text-sm bg-gray-50">{cuisines.join("  ")}</h4>
       <div className="flex py-2 justify-self-end">
         <span className="pr-2">
           <svg
@@ -62,5 +58,17 @@ const RestaurantCard = (swiggyData) => {
       <h4 className="text-xs">{sla.deliveryTime} minutes</h4>
     </div>
   );
+};
+
+export const withPromotedLabel = (RestaurantCard) => {
+  console.log('inside the withpromoted label');
+  return (props) => {
+    return (
+      <div className="relative">
+        <label className="bg-orange-600 text-black font-bold px-1 py-0.5 rounded-sm absolute left-0 top-0 opacity-70">Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 export default RestaurantCard;
