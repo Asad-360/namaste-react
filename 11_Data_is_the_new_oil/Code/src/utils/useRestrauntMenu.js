@@ -17,9 +17,9 @@ const useRestrauntMenu = (
         .find((x) => x.groupedCard)
         ?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((x) => x.card?.card)
         ?.filter((x) => x["@type"] == menuItemMenuItemKeyType)
-        ?.map((x) => x.itemCards)
-        .flat()
-        .map((x) => x.card?.info) || [];
+        ?.map((x) => ({cardsDetails: x.itemCards , titleName:x.title})) || [];
+        //.flat()
+        //.map((x) => x.card?.info) || [];
     const uniqueMenuItems = menuItemsData;
     menuItemsData.forEach((item) => {
       if (!uniqueMenuItems.find((x) => x.id === item.id)) {

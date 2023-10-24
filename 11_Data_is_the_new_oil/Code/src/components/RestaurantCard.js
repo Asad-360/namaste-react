@@ -65,7 +65,7 @@ export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <div className="relative">
-        <label className="bg-orange-600 text-black font-bold px-1 py-0.5 rounded-sm absolute left-0 top-0 opacity-70">Promoted</label>
+        <label className="bg-pink-600 text-white font-bold px-1 py-0.5 rounded-sm absolute left-0 top-0 opacity-70">Promoted</label>
         <RestaurantCard {...props} />
       </div>
     );
