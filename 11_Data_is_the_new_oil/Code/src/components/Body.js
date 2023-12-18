@@ -47,7 +47,7 @@ const Body = () => {
         {resFilteredData.map((swig, index) => (
           <Link to={"/restaurant/" + swig?.info?.id} key={swig?.info?.id}>
             {index % 2 == 0 ? (
-              <RestaurantCardPromoted swiggyData={swig} />
+              <RestaurantCardPromoted key={index} swiggyData={swig} />
             ) : (
               <RestaurantCard key={index} swiggyData={swig} />
             )}

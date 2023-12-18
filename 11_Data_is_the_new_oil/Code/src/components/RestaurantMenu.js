@@ -7,6 +7,7 @@ import {
   API_GET_RESTURANT_MENU,
   MENU_ITEM_TYPE_KEY,
   COLOR_PRIMARY_BG,
+  VEG_ICON
 } from "../utils/constants";
 import RestaurantCategory from "./RestaurantCategory";
 const RestaurantMenu = () => {
@@ -31,6 +32,9 @@ const RestaurantMenu = () => {
           <span className="w-[60vw] p-4">
             <input value="Veg" type="checkbox" onChange={handleChange} />{" "}
             {isChecked ? <span>Veg Only</span> : <span>All</span>}
+          </span>
+          <span>
+            {isChecked ? <img src={VEG_ICON} className="w-[80px] py-4"></img> : <div></div>}
           </span>
         </div>
         <RestaurantCategory categoryItem={resMenuItem} imageKey = {RESTRAUNT_MENU_ITEM_IMG} />       

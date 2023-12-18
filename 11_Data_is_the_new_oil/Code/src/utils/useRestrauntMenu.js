@@ -31,8 +31,13 @@ const useRestrauntMenu = (
   };
   const filterVegNonVeg = (isVeg) => {
     let filtered = [];
+    let abc = [];
     if (isVeg) {
-      filtered = resInfo.filter((x) => x.isVeg == 1);
+      const filteredCollection = resInfo.filter(outerItem => {        
+        abc = outerItem.cardsDetails?.filter(x=>x.card.info.isVeg);
+        return abc?.length > 0;
+      });
+      filtered = filteredCollection;
     } else {
       filtered = resInfo;
     }

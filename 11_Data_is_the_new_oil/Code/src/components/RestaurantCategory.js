@@ -2,7 +2,7 @@ import RestaurantList from "./RestaurantList";
 import { useState } from "react";
 const RestaurantCategory = (prop) => {
   const { categoryItem, imageKey } = prop;
-  const [showAccordian, setShowAccordian] = useState(false);
+  const [showAccordian, setShowAccordian] = useState(-1);
   return (
     <div>
       {categoryItem &&
@@ -14,15 +14,16 @@ const RestaurantCategory = (prop) => {
                 <span
                   className="hover:cursor-pointer"
                   onClick={() => {
-                    let clonedstate = showAccordian;
-                    setShowAccordian(!clonedstate);
+                    if(showAccordian !== index)
+                    setShowAccordian(index);
+                    else
+                    setShowAccordian(-1);
                   }}
                 >
                   ▼
                 </span>
               </div>
-              {/* <RestaurantCategory categoryItem={x.cardDetails} /> */}
-              {showAccordian ? (
+              {showAccordian === index ? (
                 <RestaurantList
                   key={index}
                   resMenuItem={x.cardsDetails}
