@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState , useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 const Header = () => {    
     const [toggleLogout , setToggleLogout] = useState('Logout');
+    const {loggedInUser} = useContext(UserContext);
     return (
       <div className="flex justify-between items-center mx-40">
         <div className="logo-container">
@@ -22,7 +24,7 @@ const Header = () => {
               <button onClick={()=>{
                 //toggleLogout = 'Login';
                 toggleLogout === 'Logout' ? setToggleLogout('Login') : setToggleLogout('Logout');
-              }} class="logout-button">{toggleLogout}</button>
+              }} class="logout-button">{toggleLogout}  <b>{loggedInUser}</b></button>
             </li>
           </ul>
         </div>

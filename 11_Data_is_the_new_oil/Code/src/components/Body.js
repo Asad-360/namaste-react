@@ -1,8 +1,9 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard.js";
-import { useState } from "react";
+import { useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer.js";
 import useRestrauntList from "../utils/useRestrauntList";
+import UserContext from '../utils/UserContext.js';
 import {
   API_GET_RESTURANTS_LIST,
   COLOR_PRIMARY_BG,
@@ -12,7 +13,7 @@ const Body = () => {
     API_GET_RESTURANTS_LIST
   );
   const [searchValue, setSearchValue] = useState("");
-
+    const {setName} = useContext(UserContext);
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
   if (resFilteredData && resFilteredData.length === 0) {
@@ -29,6 +30,7 @@ const Body = () => {
             onChange={(e) => {
               const serValue = e.target.value;
               setSearchValue(serValue);
+              setName(serValue);
             }}
             value={searchValue}
           />

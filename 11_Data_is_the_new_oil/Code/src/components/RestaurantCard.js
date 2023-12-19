@@ -1,8 +1,11 @@
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 const RestaurantCard = (swiggyData) => {
   const { name, avgRatingString, cuisines, sla, cloudinaryImageId } =
     swiggyData?.swiggyData?.info;
   const cardImageUrl = CDN_URL + cloudinaryImageId;
+  const {loggedInUser} = useContext(UserContext);
 
   return (
     <div className="m-4 p-4 w-[250px] bg-white hover:border">
@@ -56,6 +59,7 @@ const RestaurantCard = (swiggyData) => {
         <span>{avgRatingString}</span>
       </div>
       <h4 className="text-xs">{sla.deliveryTime} minutes</h4>
+      <h5>User:{loggedInUser}</h5>
     </div>
   );
 };
