@@ -1,0 +1,43 @@
+{
+  "name": "02_igniting_our_app",
+  "version": "1.0.0",
+  "description": "The package for Iginiting our app 02 part of namastay react course",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asad-360/namaste-react.git#main"
+  },
+  "keywords": [
+    "react",
+    "first",
+    "app",
+    "hello",
+    "world"
+  ],
+  "author": "Asad Mukhtar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asad-360/namaste-react/issues"
+  },
+  "homepage": "https://github.com/Asad-360/namaste-react/tree/main#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.31",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
