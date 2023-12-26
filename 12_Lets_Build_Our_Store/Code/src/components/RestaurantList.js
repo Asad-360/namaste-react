@@ -1,7 +1,5 @@
 const RestaurantList = (prop) => {
-  const { resMenuItem, RESTRAUNT_MENU_ITEM_IMG, addToCart , isMapable } = prop;
-   console.log('reslist is',resMenuItem);
-
+  const { resMenuItem, RESTRAUNT_MENU_ITEM_IMG, addToCart ,removeFromCart, isMapable } = prop;
   const res =  isMapable ? resMenuItem.map((x) => x.card?.info) || [] : resMenuItem ;
   return (
     <div>
@@ -34,14 +32,15 @@ const RestaurantList = (prop) => {
                     className="w-[150px] object-cover rounded-sm shadow-md"
                     src={RESTRAUNT_MENU_ITEM_IMG + restaurant.imageId}
                   ></img>
-                  { isMapable && <div>
+                  {  <div>
                     <button
                       onClick={() => {
-                        addToCart(restaurant);
+                        debugger
+                        isMapable ? addToCart(restaurant) : removeFromCart(restaurant); 
                       }}
                       className="bg-black text-white rounded-sm my-2 p-4"
                     >
-                      Add+
+                      {isMapable ? 'Add+' : 'Remove-'}
                     </button>
                   </div>}
                 </div>
