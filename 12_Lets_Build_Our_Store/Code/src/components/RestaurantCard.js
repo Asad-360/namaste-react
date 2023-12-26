@@ -1,11 +1,9 @@
 import { CDN_URL } from "../utils/constants";
 import UserContext from "../utils/UserContext";
-import { useContext } from "react";
 const RestaurantCard = (swiggyData) => {
   const { name, avgRatingString, cuisines, sla, cloudinaryImageId } =
     swiggyData?.swiggyData?.info;
   const cardImageUrl = CDN_URL + cloudinaryImageId;
-  const {loggedInUser} = useContext(UserContext);
 
   return (
     <div className="m-4 p-4 w-[250px] bg-white hover:border">
@@ -59,17 +57,15 @@ const RestaurantCard = (swiggyData) => {
         <span>{avgRatingString}</span>
       </div>
       <h4 className="text-xs">{sla.deliveryTime} minutes</h4>
-      <h5>User:{loggedInUser}</h5>
     </div>
   );
 };
 
 export const withPromotedLabel = (RestaurantCard) => {
-  console.log('inside the withpromoted label');
   return (props) => {
     return (
       <div className="relative">
-        <label className="bg-pink-600 text-white font-bold px-1 py-0.5 rounded-sm absolute left-0 top-0 opacity-70">Promoted</label>
+        <label className="bg-red-600 text-white font-thin uppercase text-xs p-1 rounded-sm absolute left-4 top-0 opacity-100">Promoted</label>
         <RestaurantCard {...props} />
       </div>
     );
