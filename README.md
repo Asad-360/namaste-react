@@ -7,3 +7,4 @@ Namaste React 🚀 by Akshay Saini
 - Install Babel dependencies command is npm install --save-dev babel-jest @babel/core @babel/preset-env
 - Configured the babel in the root of the folder using babel.config.js
 - Create .parcelrc at the root to disable default babel transpilation.
+- Configured JEST Using npx jest --init which creates jest.config.js
