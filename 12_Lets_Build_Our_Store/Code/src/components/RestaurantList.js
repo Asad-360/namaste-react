@@ -38,7 +38,7 @@ const RestaurantList = (prop) => {
                         debugger
                         isMapable ? addToCart(restaurant) : removeFromCart(restaurant); 
                       }}
-                      className="bg-black text-white rounded-sm my-2 p-4"
+                      className="bg-black text-white rounded-sm my-2 p-4 cursor-pointer hover:bg-slate-800"
                     >
                       {isMapable ? 'Add+' : 'Remove-'}
                     </button>
