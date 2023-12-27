@@ -1,4 +1,4 @@
-l{
+{
   "extends": "@parcel/config-default",
   "transformers": {
     "*.{js,mjs,jsx,cjs,ts,tsx}": [

@@ -11,7 +11,6 @@ describe("Contact us test cases",()=>{
     it("Should check the number of text boxes",()=>{
         render(<ContactUs/>);
         const input = screen.getAllByRole("textbox");
-        console.log(input);
         expect(input.length).toBe(2);
     });
 });
