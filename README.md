@@ -11,7 +11,9 @@ Namaste React 🚀 by Akshay Saini
 - Create .parcelrc at the root to disable default babel transpilation.
 - Configured JEST Using npx jest --init which creates jest.config.js
 - Install JSDOM Using the command npm install --save-dev jest-environment-jsdoms
-
+- Install @babel/preset-react to make JSX Work in test cases command npm install --save-dev babel-jest @babel/preset-react
+- Include @babel/preset-react inside babel.config.js
+- Install @testing-library/jest-dom for the method like toBeInTheDocument();
 # JEST Folder default conventions
 
 -  __tests__ (dundertests)
