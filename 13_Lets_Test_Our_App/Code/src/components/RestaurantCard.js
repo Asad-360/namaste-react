@@ -1,6 +1,6 @@
 import { CDN_URL } from "../utils/constants";
-import UserContext from "../utils/UserContext";
 const RestaurantCard = (swiggyData) => {
+  console.log(swiggyData)
   const { name, avgRatingString, cuisines, sla, cloudinaryImageId } =
     swiggyData?.swiggyData?.info;
   const cardImageUrl = CDN_URL + cloudinaryImageId;
