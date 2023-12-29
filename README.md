@@ -19,3 +19,5 @@ Namaste React 🚀 by Akshay Saini
 -  __tests__ (dundertests)
 -  Headers.test.js 
 - etc
+# Issues during the JEST Testing
+- If the component is having the fetch it will be failed because of fetch (if any) because it is part of browser and JSDOM Browser does not contain it

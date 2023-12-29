@@ -5,7 +5,7 @@ const Shimmer = ({ shimType }) => {
         Array(7)
           .fill(null)
           .map((_, index) => (
-            <div className="flex justify-center flex-wrap py-4">
+            <div data-testid="shimmerloading" className="flex justify-center flex-wrap py-4">
               <div className="w-[70vw] my-2">
                 <div className="bg-gray-100 p-4 rounded-lg animate-pulse">
                   <div className="h-4 bg-gray-200 rounded mb-2 w-3/4"></div>

@@ -21,8 +21,8 @@ const Header = () => {
           <li className="item px-5">
             <Link to="/contactus">Contact us</Link>
           </li>
-          <li className="item px-5">
-            <Link to="/cart">
+          <li className="item px-5" >
+            <Link data-testid="cartlink" to="/cart">
               Cart({cartItems ? cartItems.length : 0})
             </Link>
           </li>

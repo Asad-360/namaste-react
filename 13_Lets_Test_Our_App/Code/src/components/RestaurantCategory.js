@@ -16,6 +16,7 @@ const RestaurantCategory = (prop) => {
                 <span>{x.titleName}</span>
                 <span
                   className="hover:cursor-pointer"
+                  data-testid = "downarrow"
                   onClick={() => {
                     if(showAccordian !== index)
                     setShowAccordian(index);

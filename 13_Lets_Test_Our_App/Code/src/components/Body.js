@@ -3,7 +3,6 @@ import { useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer.js";
 import useRestrauntList from "../utils/useRestrauntList";
-import UserContext from '../utils/UserContext.js';
 import {
   API_GET_RESTURANTS_LIST,
   COLOR_PRIMARY_BG,
@@ -13,9 +12,7 @@ const Body = () => {
     API_GET_RESTURANTS_LIST
   );
   const [searchValue, setSearchValue] = useState("");
-    const {setName} = useContext(UserContext);
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-
   if (resFilteredData && resFilteredData.length === 0) {
     return <Shimmer shimType={"card"} />;
   }
@@ -25,16 +22,17 @@ const Body = () => {
         <div className="search p-1 my-4 rounded-md">
           <input
             type="text"
+            data-testid="searchbar"
             className="focus:ring-2 focus:ring-blue-500 focus:outline-none p-2 ring-1 ring-slate-200 shadow-sm w-96"
             placeholder="Search for food..."
             onChange={(e) => {
               const serValue = e.target.value;
               setSearchValue(serValue);
-              setName(serValue);
             }}
             value={searchValue}
           />
           <button
+            data-testid="searchbtn"
             className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-sm"
             onClick={() => {
               const valueFromSearchBox = searchValue.toLowerCase().trim();

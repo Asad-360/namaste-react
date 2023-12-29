@@ -12,6 +12,7 @@ const useRestrauntMenu = (
   const fetchData = async () => {
     const response = await fetch(getRestaurantMenuUrl + resId);
     const json = await response.json();
+
     const menuItemsData =
       json?.data?.cards
         .find((x) => x.groupedCard)

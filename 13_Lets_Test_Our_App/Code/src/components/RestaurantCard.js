@@ -1,12 +1,11 @@
 import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (swiggyData) => {
-  console.log(swiggyData)
   const { name, avgRatingString, cuisines, sla, cloudinaryImageId } =
     swiggyData?.swiggyData?.info;
   const cardImageUrl = CDN_URL + cloudinaryImageId;
 
   return (
-    <div className="m-4 p-4 w-[250px] bg-white hover:border">
+    <div data-testid="restaurantcard" className="m-4 p-4 w-[250px] bg-white hover:border">
       <div className="h-[180px]">
         <img
           className="w-full h-full rounded-lg object-cover shadow-lg"

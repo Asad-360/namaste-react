@@ -34,6 +34,7 @@ const RestaurantList = (prop) => {
                   ></img>
                   {  <div>
                     <button
+                      data-testid = "cartactionbtn"
                       onClick={() => {
                         debugger
                         isMapable ? addToCart(restaurant) : removeFromCart(restaurant); 
