@@ -19,12 +19,12 @@ const Body = () => {
   return (
     <div className={COLOR_PRIMARY_BG}>
       <div className="flex justify-center">
-        <div className="search p-1 my-4 rounded-md">
+        <div className="search p-1 my-4  bg-slate-200">
           <input
             type="text"
             data-testid="searchbar"
-            className="focus:ring-2 focus:ring-blue-500 focus:outline-none p-2 ring-1 ring-slate-200 shadow-sm w-96"
-            placeholder="Search for food..."
+            className="focus:ring-2  focus:outline-none p-2 ring-1 ring-slate-200  w-96"
+            placeholder="Search for a restaurant . . ."
             onChange={(e) => {
               const serValue = e.target.value;
               setSearchValue(serValue);
@@ -33,7 +33,7 @@ const Body = () => {
           />
           <button
             data-testid="searchbtn"
-            className="px-4 py-2 bg-orange-500 text-white  m-4 rounded-sm"
+            className="px-4 py-2 bg-orange-500 text-white  m-0"
             onClick={() => {
               const valueFromSearchBox = searchValue.toLowerCase().trim();
               setFilteredResData(valueFromSearchBox);
